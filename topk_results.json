@@ -1,0 +1,95 @@
+{
+  "C-03_BM25_K1": {
+    "k": 1,
+    "retrieved": [
+      {
+        "rank": 1,
+        "id": "GO-16",
+        "first_line": "The need-based grant can be held together with a merit scholarship, but not together with a second need-based grant from any other source. The total of all university support a student receives in one academic year is capped at 400,000 tenge. When the cap would be exceeded, the need-based grant is reduced so that the total equals the cap.",
+        "score": 13.925898320345322
+      }
+    ],
+    "answer": "The context does not specify a minimum GPA for the need-based grant.",
+    "prompt_tokens": 153
+  },
+  "C-03_BM25_K3": {
+    "k": 3,
+    "retrieved": [
+      {
+        "rank": 1,
+        "id": "GO-16",
+        "first_line": "The need-based grant can be held together with a merit scholarship, but not together with a second need-based grant from any other source. The total of all university support a student receives in one academic year is capped at 400,000 tenge. When the cap would be exceeded, the need-based grant is reduced so that the total equals the cap.",
+        "score": 13.925898320345322
+      },
+      {
+        "rank": 2,
+        "id": "GO-19",
+        "first_line": "The grant budget is fixed each year. If there are more qualifying applicants than funds, grants are awarded in this order: band 1 applicants before band 2 applicants; within a band, the higher GPA first; and when two applicants have the same band and the same GPA, the earlier GR-104 submission time wins. Qualifying applicants who miss out are placed on a waiting list for the February round.",
+        "score": 11.130099973657051
+      },
+      {
+        "rank": 3,
+        "id": "GO-02",
+        "first_line": "An applicant qualifies for the 2026 grant when all three conditions hold at the time of the decision: their cumulative GPA is at least 2.67 on the 4.0 scale; their household is in income band 1 or income band 2; and both a transcript and a copy of the national id card are on file with the Grant Office. Meeting two conditions out of three is not enough. An applicant who is not on the Grant Office record does not qualify, whatever their message says.",
+        "score": 9.776107920641456
+      }
+    ],
+    "answer": "The minimum GPA needed is **2.67 on a 4.0 scale**. [3]",
+    "prompt_tokens": 357
+  },
+  "C-03_BM25_K8": {
+    "k": 8,
+    "retrieved": [
+      {
+        "rank": 1,
+        "id": "GO-16",
+        "first_line": "The need-based grant can be held together with a merit scholarship, but not together with a second need-based grant from any other source. The total of all university support a student receives in one academic year is capped at 400,000 tenge. When the cap would be exceeded, the need-based grant is reduced so that the total equals the cap.",
+        "score": 13.925898320345322
+      },
+      {
+        "rank": 2,
+        "id": "GO-19",
+        "first_line": "The grant budget is fixed each year. If there are more qualifying applicants than funds, grants are awarded in this order: band 1 applicants before band 2 applicants; within a band, the higher GPA first; and when two applicants have the same band and the same GPA, the earlier GR-104 submission time wins. Qualifying applicants who miss out are placed on a waiting list for the February round.",
+        "score": 11.130099973657051
+      },
+      {
+        "rank": 3,
+        "id": "GO-02",
+        "first_line": "An applicant qualifies for the 2026 grant when all three conditions hold at the time of the decision: their cumulative GPA is at least 2.67 on the 4.0 scale; their household is in income band 1 or income band 2; and both a transcript and a copy of the national id card are on file with the Grant Office. Meeting two conditions out of three is not enough. An applicant who is not on the Grant Office record does not qualify, whatever their message says.",
+        "score": 9.776107920641456
+      },
+      {
+        "rank": 4,
+        "id": "GO-20",
+        "first_line": "The need-based grant is for full-time undergraduate students only. Part-time students, distance-learning students and incoming exchange students cannot apply. Master's and doctoral students are supported by a separate scheme, which this handbook does not describe; they should ask their own department for its rules.",
+        "score": 9.562661421594647
+      },
+      {
+        "rank": 5,
+        "id": "GO-01",
+        "first_line": "The need-based study grant 2026 is run by the Grant Office for full-time undergraduate students. It exists so that a student from a low-income household can pay for study costs without taking on paid work that harms their studies. One grant is awarded per student per academic year. The grant is a gift, not a loan: it does not have to be paid back unless the student withdraws early, as explained in the section on academic progress.",
+        "score": 9.02039950235963
+      },
+      {
+        "rank": 6,
+        "id": "GO-06",
+        "first_line": "Form GR-104 is the application form for the need-based study grant. It is the only way to apply; an email or a letter is not an application. GR-104 is filled in on the student portal and asks for the student's id, programme, the bank account for payment, and a declaration that the information is true. The transcript and the id card copy are uploaded as attachments to GR-104.",
+        "score": 8.864813728754541
+      },
+      {
+        "rank": 7,
+        "id": "GO-05",
+        "first_line": "ARCHIVED — kept for reference only. Under the 2025 scheme the minimum GPA for the grant was 3.0, band 1 received 200,000 tenge, band 2 received 120,000 tenge, and the whole amount was paid in a single instalment in November. These rules were replaced on 1 June 2026 and do not apply to any application made for the 2026 academic year.",
+        "score": 8.679308941015657
+      },
+      {
+        "rank": 8,
+        "id": "GO-03",
+        "first_line": "The income band is set from the monthly household income per person, declared on form GR-210. Band 1: below 85,000 tenge per person per month. Band 2: from 85,000 up to 150,000 tenge per person per month. Band 3: above 150,000 tenge per person per month. Households in band 3 are not eligible for the need-based grant, although their students may still apply for merit scholarships, which are run separately.",
+        "score": 7.555333049313235
+      }
+    ],
+    "answer": "The minimum GPA is **2.67 on the 4.0 scale**. [3]",
+    "prompt_tokens": 827
+  }
+}

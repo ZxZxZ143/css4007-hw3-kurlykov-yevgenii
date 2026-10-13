@@ -48,7 +48,7 @@ to use. How you put them together is up to you.
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-cp .env.example .env             # then put both keys in .env
+cp .env .env             # then put both keys in .env
 jupyter lab HW3.ipynb
 ```
 

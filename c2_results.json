@@ -1,0 +1,578 @@
+{
+  "C-01": {
+    "question": "How much does a student in income band 2 receive, and when is it paid?",
+    "reference": "150,000 tenge for the academic year, in two equal instalments: October and February.",
+    "systems": {
+      "llm_only": {
+        "answer": "Which student support scheme and academic year do you mean? “Income band 2” varies by country and provider, and the payment amount and schedule depend on that—for example, SUSI in Ireland, Student Finance, or a university bursary.",
+        "retrieved": [],
+        "context_blocks": [],
+        "messages": [
+          {
+            "role": "user",
+            "content": "How much does a student in income band 2 receive, and when is it paid?"
+          }
+        ],
+        "prompt_tokens": 24
+      },
+      "bm25_rag": {
+        "answer": "A student in income band 2 receives **150,000 tenge for the academic year**, paid in **two equal instalments**: **75,000 tenge in October** and **75,000 tenge in February**. [1]",
+        "retrieved": [
+          {
+            "rank": 1,
+            "id": "GO-04",
+            "first_line": "The grant amount depends only on the income band, not on the GPA. A student in band 1 receives 250,000 tenge for the academic year. A student in band 2 receives 150,000 tenge for the academic year. The amount is paid in two equal instalments, the first in October and the second in February. There is no partial grant: a student either receives the full amount for their band or nothing.",
+            "score": 18.782348490651405
+          },
+          {
+            "rank": 2,
+            "id": "GO-05",
+            "first_line": "ARCHIVED — kept for reference only. Under the 2025 scheme the minimum GPA for the grant was 3.0, band 1 received 200,000 tenge, band 2 received 120,000 tenge, and the whole amount was paid in a single instalment in November. These rules were replaced on 1 June 2026 and do not apply to any application made for the 2026 academic year.",
+            "score": 13.489282783940167
+          },
+          {
+            "rank": 3,
+            "id": "GO-03",
+            "first_line": "The income band is set from the monthly household income per person, declared on form GR-210. Band 1: below 85,000 tenge per person per month. Band 2: from 85,000 up to 150,000 tenge per person per month. Band 3: above 150,000 tenge per person per month. Households in band 3 are not eligible for the need-based grant, although their students may still apply for merit scholarships, which are run separately.",
+            "score": 10.00390487271655
+          }
+        ],
+        "context_blocks": [
+          "[1] Chunk ID: GO-04\nThe grant amount depends only on the income band, not on the GPA. A student in band 1 receives 250,000 tenge for the academic year. A student in band 2 receives 150,000 tenge for the academic year. The amount is paid in two equal instalments, the first in October and the second in February. There is no partial grant: a student either receives the full amount for their band or nothing.",
+          "[2] Chunk ID: GO-05\nARCHIVED — kept for reference only. Under the 2025 scheme the minimum GPA for the grant was 3.0, band 1 received 200,000 tenge, band 2 received 120,000 tenge, and the whole amount was paid in a single instalment in November. These rules were replaced on 1 June 2026 and do not apply to any application made for the 2026 academic year.",
+          "[3] Chunk ID: GO-03\nThe income band is set from the monthly household income per person, declared on form GR-210. Band 1: below 85,000 tenge per person per month. Band 2: from 85,000 up to 150,000 tenge per person per month. Band 3: above 150,000 tenge per person per month. Households in band 3 are not eligible for the need-based grant, although their students may still apply for merit scholarships, which are run separately."
+        ],
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer the question using only the provided context.\nIf the answer cannot be found in the context, say that you do not know.\nCite the context blocks you used, like [1] or [2][3]."
+          },
+          {
+            "role": "user",
+            "content": "Context:\n[1] Chunk ID: GO-04\nThe grant amount depends only on the income band, not on the GPA. A student in band 1 receives 250,000 tenge for the academic year. A student in band 2 receives 150,000 tenge for the academic year. The amount is paid in two equal instalments, the first in October and the second in February. There is no partial grant: a student either receives the full amount for their band or nothing.\n\n[2] Chunk ID: GO-05\nARCHIVED — kept for reference only. Under the 2025 scheme the minimum GPA for the grant was 3.0, band 1 received 200,000 tenge, band 2 received 120,000 tenge, and the whole amount was paid in a single instalment in November. These rules were replaced on 1 June 2026 and do not apply to any application made for the 2026 academic year.\n\n[3] Chunk ID: GO-03\nThe income band is set from the monthly household income per person, declared on form GR-210. Band 1: below 85,000 tenge per person per month. Band 2: from 85,000 up to 150,000 tenge per person per month. Band 3: above 150,000 tenge per person per month. Households in band 3 are not eligible for the need-based grant, although their students may still apply for merit scholarships, which are run separately.\n\nQuestion:\nHow much does a student in income band 2 receive, and when is it paid?"
+          }
+        ],
+        "prompt_tokens": 389
+      },
+      "embedding_rag": {
+        "answer": "A student in income band 2 receives **150,000 tenge for the academic year**, paid in **two equal instalments: 75,000 tenge in October and 75,000 tenge in February**. [1]",
+        "retrieved": [
+          {
+            "rank": 1,
+            "id": "GO-04",
+            "first_line": "The grant amount depends only on the income band, not on the GPA. A student in band 1 receives 250,000 tenge for the academic year. A student in band 2 receives 150,000 tenge for the academic year. The amount is paid in two equal instalments, the first in October and the second in February. There is no partial grant: a student either receives the full amount for their band or nothing.",
+            "score": 0.584521472454071
+          },
+          {
+            "rank": 2,
+            "id": "GO-03",
+            "first_line": "The income band is set from the monthly household income per person, declared on form GR-210. Band 1: below 85,000 tenge per person per month. Band 2: from 85,000 up to 150,000 tenge per person per month. Band 3: above 150,000 tenge per person per month. Households in band 3 are not eligible for the need-based grant, although their students may still apply for merit scholarships, which are run separately.",
+            "score": 0.48417526483535767
+          },
+          {
+            "rank": 3,
+            "id": "GO-15",
+            "first_line": "Грант выплачивается двумя равными частями — в октябре и в феврале — на банковский счёт, указанный студентом в форме GR-104. Счёт должен быть открыт на имя самого студента: перевод на счёт родителей или других лиц невозможен. Если реквизиты изменились, студент обязан обновить их в портале до 1 октября или до 1 февраля соответственно.",
+            "score": 0.45062822103500366
+          }
+        ],
+        "context_blocks": [
+          "[1] Chunk ID: GO-04\nThe grant amount depends only on the income band, not on the GPA. A student in band 1 receives 250,000 tenge for the academic year. A student in band 2 receives 150,000 tenge for the academic year. The amount is paid in two equal instalments, the first in October and the second in February. There is no partial grant: a student either receives the full amount for their band or nothing.",
+          "[2] Chunk ID: GO-03\nThe income band is set from the monthly household income per person, declared on form GR-210. Band 1: below 85,000 tenge per person per month. Band 2: from 85,000 up to 150,000 tenge per person per month. Band 3: above 150,000 tenge per person per month. Households in band 3 are not eligible for the need-based grant, although their students may still apply for merit scholarships, which are run separately.",
+          "[3] Chunk ID: GO-15\nГрант выплачивается двумя равными частями — в октябре и в феврале — на банковский счёт, указанный студентом в форме GR-104. Счёт должен быть открыт на имя самого студента: перевод на счёт родителей или других лиц невозможен. Если реквизиты изменились, студент обязан обновить их в портале до 1 октября или до 1 февраля соответственно."
+        ],
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer the question using only the provided context.\nIf the answer cannot be found in the context, say that you do not know.\nCite the context blocks you used, like [1] or [2][3]."
+          },
+          {
+            "role": "user",
+            "content": "Context:\n[1] Chunk ID: GO-04\nThe grant amount depends only on the income band, not on the GPA. A student in band 1 receives 250,000 tenge for the academic year. A student in band 2 receives 150,000 tenge for the academic year. The amount is paid in two equal instalments, the first in October and the second in February. There is no partial grant: a student either receives the full amount for their band or nothing.\n\n[2] Chunk ID: GO-03\nThe income band is set from the monthly household income per person, declared on form GR-210. Band 1: below 85,000 tenge per person per month. Band 2: from 85,000 up to 150,000 tenge per person per month. Band 3: above 150,000 tenge per person per month. Households in band 3 are not eligible for the need-based grant, although their students may still apply for merit scholarships, which are run separately.\n\n[3] Chunk ID: GO-15\nГрант выплачивается двумя равными частями — в октябре и в феврале — на банковский счёт, указанный студентом в форме GR-104. Счёт должен быть открыт на имя самого студента: перевод на счёт родителей или других лиц невозможен. Если реквизиты изменились, студент обязан обновить их в портале до 1 октября или до 1 февраля соответственно.\n\nQuestion:\nHow much does a student in income band 2 receive, and when is it paid?"
+          }
+        ],
+        "prompt_tokens": 385
+      }
+    }
+  },
+  "C-02": {
+    "question": "My grant application was refused. How long do I have to appeal, and which form do I use?",
+    "reference": "14 calendar days from the date on the decision letter, using form GR-305.",
+    "systems": {
+      "llm_only": {
+        "answer": "The appeal deadline and form depend on the **grant program, funding agency, and country**. Check the refusal/decision letter first—it should state:\n\n- the deadline (often **14, 30, or 60 days** from the date of the decision or when you received it);\n- whether you must request **reconsideration, review, or appeal**;\n- the required form or online portal; and\n- where to submit it.\n\nDo **not** assume that a general appeals form is acceptable—some programs require a specific form, while others only allow an appeal on procedural or legal grounds, not disagreement with the assessment.\n\nTell me the **name of the grant or agency, your country/jurisdiction, and the date on the refusal letter**, and I can identify the exact deadline and form.",
+        "retrieved": [],
+        "context_blocks": [],
+        "messages": [
+          {
+            "role": "user",
+            "content": "My grant application was refused. How long do I have to appeal, and which form do I use?"
+          }
+        ],
+        "prompt_tokens": 27
+      },
+      "bm25_rag": {
+        "answer": "You have **14 calendar days from the date on the decision letter** to appeal. Use **form GR-305**, the Grant Office appeal form. [1][2]",
+        "retrieved": [
+          {
+            "rank": 1,
+            "id": "GO-08",
+            "first_line": "Form GR-305 is used to appeal a decision of the Grant Office. It is the appeal form and nothing else: it cannot be used to apply for the first time or to report a change in circumstances. On GR-305 the student states which part of the decision they believe is wrong and which rule in this handbook supports their case.",
+            "score": 12.724521158461936
+          },
+          {
+            "rank": 2,
+            "id": "GO-12",
+            "first_line": "A student who disagrees with a decision may appeal within 14 calendar days of the date on the decision letter, using form GR-305. The appeal is read by a panel of three staff members who did not take part in the original decision, and the panel answers within 20 working days. An appeal reviews the decision on the evidence that was on file; new income information cannot be added through an appeal and needs a new application.",
+            "score": 12.349778425560967
+          },
+          {
+            "rank": 3,
+            "id": "GO-11",
+            "first_line": "If a required document is missing, the Grant Office does not refuse the application straight away. The decision is recorded as 'more information needed', and the student is told exactly which document is missing. The student then has 10 working days to upload it through the portal. If the document does not arrive in that time, the application lapses and the student must apply again before the deadline.",
+            "score": 9.375471232494633
+          }
+        ],
+        "context_blocks": [
+          "[1] Chunk ID: GO-08\nForm GR-305 is used to appeal a decision of the Grant Office. It is the appeal form and nothing else: it cannot be used to apply for the first time or to report a change in circumstances. On GR-305 the student states which part of the decision they believe is wrong and which rule in this handbook supports their case.",
+          "[2] Chunk ID: GO-12\nA student who disagrees with a decision may appeal within 14 calendar days of the date on the decision letter, using form GR-305. The appeal is read by a panel of three staff members who did not take part in the original decision, and the panel answers within 20 working days. An appeal reviews the decision on the evidence that was on file; new income information cannot be added through an appeal and needs a new application.",
+          "[3] Chunk ID: GO-11\nIf a required document is missing, the Grant Office does not refuse the application straight away. The decision is recorded as 'more information needed', and the student is told exactly which document is missing. The student then has 10 working days to upload it through the portal. If the document does not arrive in that time, the application lapses and the student must apply again before the deadline."
+        ],
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer the question using only the provided context.\nIf the answer cannot be found in the context, say that you do not know.\nCite the context blocks you used, like [1] or [2][3]."
+          },
+          {
+            "role": "user",
+            "content": "Context:\n[1] Chunk ID: GO-08\nForm GR-305 is used to appeal a decision of the Grant Office. It is the appeal form and nothing else: it cannot be used to apply for the first time or to report a change in circumstances. On GR-305 the student states which part of the decision they believe is wrong and which rule in this handbook supports their case.\n\n[2] Chunk ID: GO-12\nA student who disagrees with a decision may appeal within 14 calendar days of the date on the decision letter, using form GR-305. The appeal is read by a panel of three staff members who did not take part in the original decision, and the panel answers within 20 working days. An appeal reviews the decision on the evidence that was on file; new income information cannot be added through an appeal and needs a new application.\n\n[3] Chunk ID: GO-11\nIf a required document is missing, the Grant Office does not refuse the application straight away. The decision is recorded as 'more information needed', and the student is told exactly which document is missing. The student then has 10 working days to upload it through the portal. If the document does not arrive in that time, the application lapses and the student must apply again before the deadline.\n\nQuestion:\nMy grant application was refused. How long do I have to appeal, and which form do I use?"
+          }
+        ],
+        "prompt_tokens": 343
+      },
+      "embedding_rag": {
+        "answer": "You have **14 calendar days from the date on the decision letter** to appeal. Use **form GR-305**. [2]",
+        "retrieved": [
+          {
+            "rank": 1,
+            "id": "GO-08",
+            "first_line": "Form GR-305 is used to appeal a decision of the Grant Office. It is the appeal form and nothing else: it cannot be used to apply for the first time or to report a change in circumstances. On GR-305 the student states which part of the decision they believe is wrong and which rule in this handbook supports their case.",
+            "score": 0.6028919219970703
+          },
+          {
+            "rank": 2,
+            "id": "GO-12",
+            "first_line": "A student who disagrees with a decision may appeal within 14 calendar days of the date on the decision letter, using form GR-305. The appeal is read by a panel of three staff members who did not take part in the original decision, and the panel answers within 20 working days. An appeal reviews the decision on the evidence that was on file; new income information cannot be added through an appeal and needs a new application.",
+            "score": 0.5590736269950867
+          },
+          {
+            "rank": 3,
+            "id": "GO-11",
+            "first_line": "If a required document is missing, the Grant Office does not refuse the application straight away. The decision is recorded as 'more information needed', and the student is told exactly which document is missing. The student then has 10 working days to upload it through the portal. If the document does not arrive in that time, the application lapses and the student must apply again before the deadline.",
+            "score": 0.5342729091644287
+          }
+        ],
+        "context_blocks": [
+          "[1] Chunk ID: GO-08\nForm GR-305 is used to appeal a decision of the Grant Office. It is the appeal form and nothing else: it cannot be used to apply for the first time or to report a change in circumstances. On GR-305 the student states which part of the decision they believe is wrong and which rule in this handbook supports their case.",
+          "[2] Chunk ID: GO-12\nA student who disagrees with a decision may appeal within 14 calendar days of the date on the decision letter, using form GR-305. The appeal is read by a panel of three staff members who did not take part in the original decision, and the panel answers within 20 working days. An appeal reviews the decision on the evidence that was on file; new income information cannot be added through an appeal and needs a new application.",
+          "[3] Chunk ID: GO-11\nIf a required document is missing, the Grant Office does not refuse the application straight away. The decision is recorded as 'more information needed', and the student is told exactly which document is missing. The student then has 10 working days to upload it through the portal. If the document does not arrive in that time, the application lapses and the student must apply again before the deadline."
+        ],
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer the question using only the provided context.\nIf the answer cannot be found in the context, say that you do not know.\nCite the context blocks you used, like [1] or [2][3]."
+          },
+          {
+            "role": "user",
+            "content": "Context:\n[1] Chunk ID: GO-08\nForm GR-305 is used to appeal a decision of the Grant Office. It is the appeal form and nothing else: it cannot be used to apply for the first time or to report a change in circumstances. On GR-305 the student states which part of the decision they believe is wrong and which rule in this handbook supports their case.\n\n[2] Chunk ID: GO-12\nA student who disagrees with a decision may appeal within 14 calendar days of the date on the decision letter, using form GR-305. The appeal is read by a panel of three staff members who did not take part in the original decision, and the panel answers within 20 working days. An appeal reviews the decision on the evidence that was on file; new income information cannot be added through an appeal and needs a new application.\n\n[3] Chunk ID: GO-11\nIf a required document is missing, the Grant Office does not refuse the application straight away. The decision is recorded as 'more information needed', and the student is told exactly which document is missing. The student then has 10 working days to upload it through the portal. If the document does not arrive in that time, the application lapses and the student must apply again before the deadline.\n\nQuestion:\nMy grant application was refused. How long do I have to appeal, and which form do I use?"
+          }
+        ],
+        "prompt_tokens": 343
+      }
+    }
+  },
+  "C-03": {
+    "question": "What is the minimum GPA needed to qualify for the need-based grant?",
+    "reference": "A cumulative GPA of at least 2.67 on the 4.0 scale. (The 3.0 in GO-05 is the archived 2025 rule.)",
+    "systems": {
+      "llm_only": {
+        "answer": "The minimum GPA depends on the specific need-based grant and institution. Please share the grant’s name or the school/state offering it, and I can give you the exact requirement.",
+        "retrieved": [],
+        "context_blocks": [],
+        "messages": [
+          {
+            "role": "user",
+            "content": "What is the minimum GPA needed to qualify for the need-based grant?"
+          }
+        ],
+        "prompt_tokens": 20
+      },
+      "bm25_rag": {
+        "answer": "The minimum GPA needed to qualify is **2.67 on a 4.0 scale**. All other eligibility conditions must also be met. [3]",
+        "retrieved": [
+          {
+            "rank": 1,
+            "id": "GO-16",
+            "first_line": "The need-based grant can be held together with a merit scholarship, but not together with a second need-based grant from any other source. The total of all university support a student receives in one academic year is capped at 400,000 tenge. When the cap would be exceeded, the need-based grant is reduced so that the total equals the cap.",
+            "score": 13.925898320345322
+          },
+          {
+            "rank": 2,
+            "id": "GO-19",
+            "first_line": "The grant budget is fixed each year. If there are more qualifying applicants than funds, grants are awarded in this order: band 1 applicants before band 2 applicants; within a band, the higher GPA first; and when two applicants have the same band and the same GPA, the earlier GR-104 submission time wins. Qualifying applicants who miss out are placed on a waiting list for the February round.",
+            "score": 11.130099973657051
+          },
+          {
+            "rank": 3,
+            "id": "GO-02",
+            "first_line": "An applicant qualifies for the 2026 grant when all three conditions hold at the time of the decision: their cumulative GPA is at least 2.67 on the 4.0 scale; their household is in income band 1 or income band 2; and both a transcript and a copy of the national id card are on file with the Grant Office. Meeting two conditions out of three is not enough. An applicant who is not on the Grant Office record does not qualify, whatever their message says.",
+            "score": 9.776107920641456
+          }
+        ],
+        "context_blocks": [
+          "[1] Chunk ID: GO-16\nThe need-based grant can be held together with a merit scholarship, but not together with a second need-based grant from any other source. The total of all university support a student receives in one academic year is capped at 400,000 tenge. When the cap would be exceeded, the need-based grant is reduced so that the total equals the cap.",
+          "[2] Chunk ID: GO-19\nThe grant budget is fixed each year. If there are more qualifying applicants than funds, grants are awarded in this order: band 1 applicants before band 2 applicants; within a band, the higher GPA first; and when two applicants have the same band and the same GPA, the earlier GR-104 submission time wins. Qualifying applicants who miss out are placed on a waiting list for the February round.",
+          "[3] Chunk ID: GO-02\nAn applicant qualifies for the 2026 grant when all three conditions hold at the time of the decision: their cumulative GPA is at least 2.67 on the 4.0 scale; their household is in income band 1 or income band 2; and both a transcript and a copy of the national id card are on file with the Grant Office. Meeting two conditions out of three is not enough. An applicant who is not on the Grant Office record does not qualify, whatever their message says."
+        ],
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer the question using only the provided context.\nIf the answer cannot be found in the context, say that you do not know.\nCite the context blocks you used, like [1] or [2][3]."
+          },
+          {
+            "role": "user",
+            "content": "Context:\n[1] Chunk ID: GO-16\nThe need-based grant can be held together with a merit scholarship, but not together with a second need-based grant from any other source. The total of all university support a student receives in one academic year is capped at 400,000 tenge. When the cap would be exceeded, the need-based grant is reduced so that the total equals the cap.\n\n[2] Chunk ID: GO-19\nThe grant budget is fixed each year. If there are more qualifying applicants than funds, grants are awarded in this order: band 1 applicants before band 2 applicants; within a band, the higher GPA first; and when two applicants have the same band and the same GPA, the earlier GR-104 submission time wins. Qualifying applicants who miss out are placed on a waiting list for the February round.\n\n[3] Chunk ID: GO-02\nAn applicant qualifies for the 2026 grant when all three conditions hold at the time of the decision: their cumulative GPA is at least 2.67 on the 4.0 scale; their household is in income band 1 or income band 2; and both a transcript and a copy of the national id card are on file with the Grant Office. Meeting two conditions out of three is not enough. An applicant who is not on the Grant Office record does not qualify, whatever their message says.\n\nQuestion:\nWhat is the minimum GPA needed to qualify for the need-based grant?"
+          }
+        ],
+        "prompt_tokens": 357
+      },
+      "embedding_rag": {
+        "answer": "The minimum GPA is **2.67 on a 4.0 scale**. [1]",
+        "retrieved": [
+          {
+            "rank": 1,
+            "id": "GO-02",
+            "first_line": "An applicant qualifies for the 2026 grant when all three conditions hold at the time of the decision: their cumulative GPA is at least 2.67 on the 4.0 scale; their household is in income band 1 or income band 2; and both a transcript and a copy of the national id card are on file with the Grant Office. Meeting two conditions out of three is not enough. An applicant who is not on the Grant Office record does not qualify, whatever their message says.",
+            "score": 0.6285814046859741
+          },
+          {
+            "rank": 2,
+            "id": "GO-20",
+            "first_line": "The need-based grant is for full-time undergraduate students only. Part-time students, distance-learning students and incoming exchange students cannot apply. Master's and doctoral students are supported by a separate scheme, which this handbook does not describe; they should ask their own department for its rules.",
+            "score": 0.5690650939941406
+          },
+          {
+            "rank": 3,
+            "id": "GO-05",
+            "first_line": "ARCHIVED — kept for reference only. Under the 2025 scheme the minimum GPA for the grant was 3.0, band 1 received 200,000 tenge, band 2 received 120,000 tenge, and the whole amount was paid in a single instalment in November. These rules were replaced on 1 June 2026 and do not apply to any application made for the 2026 academic year.",
+            "score": 0.5450698137283325
+          }
+        ],
+        "context_blocks": [
+          "[1] Chunk ID: GO-02\nAn applicant qualifies for the 2026 grant when all three conditions hold at the time of the decision: their cumulative GPA is at least 2.67 on the 4.0 scale; their household is in income band 1 or income band 2; and both a transcript and a copy of the national id card are on file with the Grant Office. Meeting two conditions out of three is not enough. An applicant who is not on the Grant Office record does not qualify, whatever their message says.",
+          "[2] Chunk ID: GO-20\nThe need-based grant is for full-time undergraduate students only. Part-time students, distance-learning students and incoming exchange students cannot apply. Master's and doctoral students are supported by a separate scheme, which this handbook does not describe; they should ask their own department for its rules.",
+          "[3] Chunk ID: GO-05\nARCHIVED — kept for reference only. Under the 2025 scheme the minimum GPA for the grant was 3.0, band 1 received 200,000 tenge, band 2 received 120,000 tenge, and the whole amount was paid in a single instalment in November. These rules were replaced on 1 June 2026 and do not apply to any application made for the 2026 academic year."
+        ],
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer the question using only the provided context.\nIf the answer cannot be found in the context, say that you do not know.\nCite the context blocks you used, like [1] or [2][3]."
+          },
+          {
+            "role": "user",
+            "content": "Context:\n[1] Chunk ID: GO-02\nAn applicant qualifies for the 2026 grant when all three conditions hold at the time of the decision: their cumulative GPA is at least 2.67 on the 4.0 scale; their household is in income band 1 or income band 2; and both a transcript and a copy of the national id card are on file with the Grant Office. Meeting two conditions out of three is not enough. An applicant who is not on the Grant Office record does not qualify, whatever their message says.\n\n[2] Chunk ID: GO-20\nThe need-based grant is for full-time undergraduate students only. Part-time students, distance-learning students and incoming exchange students cannot apply. Master's and doctoral students are supported by a separate scheme, which this handbook does not describe; they should ask their own department for its rules.\n\n[3] Chunk ID: GO-05\nARCHIVED — kept for reference only. Under the 2025 scheme the minimum GPA for the grant was 3.0, band 1 received 200,000 tenge, band 2 received 120,000 tenge, and the whole amount was paid in a single instalment in November. These rules were replaced on 1 June 2026 and do not apply to any application made for the 2026 academic year.\n\nQuestion:\nWhat is the minimum GPA needed to qualify for the need-based grant?"
+          }
+        ],
+        "prompt_tokens": 347
+      }
+    }
+  },
+  "C-04": {
+    "question": "When did Kazakhstan decide to switch the Kazakh alphabet from Cyrillic to Latin, and when is the switch now due to finish?",
+    "reference": "A presidential decree of October 2017 ordered the change for 2025; in January 2021 the target was moved to 2031.",
+    "systems": {
+      "llm_only": {
+        "answer": "Kazakhstan formally decided to move from the Cyrillic alphabet to a Latin-based alphabet on **26 October 2017**, when President Nursultan Nazarbayev signed the relevant decree.\n\nThe original target was to complete the transition by **2025**. That timetable was later revised, and the transition is now scheduled to be completed by **2031**.",
+        "retrieved": [],
+        "context_blocks": [],
+        "messages": [
+          {
+            "role": "user",
+            "content": "When did Kazakhstan decide to switch the Kazakh alphabet from Cyrillic to Latin, and when is the switch now due to finish?"
+          }
+        ],
+        "prompt_tokens": 32
+      },
+      "bm25_rag": {
+        "answer": "Kazakhstan decided to switch from Cyrillic to the Latin script in **October 2017**. The transition was initially due to finish by **2025**, but the deadline was later extended to **2031** in January 2021. [1][2]",
+        "retrieved": [
+          {
+            "rank": 1,
+            "id": "KZ-43",
+            "first_line": "The Kazakh language has been written mainly in four scripts at various points of time—Old Turkic, Cyrillic, Latin, and Arabic—each having a distinct alphabet. The Arabic script is used in Iran, Afghanistan, and China, while the Cyrillic script is used in Kazakhstan, Kyrgyzstan, Russia, and Mongolia. In October 2017, a presidential decree in Kazakhstan ordered a transition from the Cyrillic to Latin script to be implemented by 2025. In January 2021, the target year for finishing the transition was pushed back to 2031.",
+            "score": 18.769339867904733
+          },
+          {
+            "rank": 2,
+            "id": "KZ-14",
+            "first_line": "In October 2017, the then president, Nursultan Nazarbayev, decreed that the writing system would change from Cyrillic to Latin script by 2025. The proposed Latin alphabet has been revised several times and, as of January 2021, is close to the inventory of the Turkish alphabet, though it lacks the letters C and Ç and has four additional letters: Ä, Ñ, Q, and Ū (though other letters, such as Y, have different values in the two languages). It is scheduled to be phased in from 2023 to 2031. Over one million Kazakh speakers in Xinjiang use a modified version of the Perso-Arabic script for writing.",
+            "score": 12.539068376037903
+          },
+          {
+            "rank": 3,
+            "id": "GO-22",
+            "first_line": "The documents an applicant uploads are used only to decide the grant. They are kept for three years after the last payment and then deleted. The Grant Office does not share income information with lecturers, with other students, or with any organisation outside the university, except where the law requires it.",
+            "score": 4.3841900520742225
+          }
+        ],
+        "context_blocks": [
+          "[1] Chunk ID: KZ-43\nThe Kazakh language has been written mainly in four scripts at various points of time—Old Turkic, Cyrillic, Latin, and Arabic—each having a distinct alphabet. The Arabic script is used in Iran, Afghanistan, and China, while the Cyrillic script is used in Kazakhstan, Kyrgyzstan, Russia, and Mongolia. In October 2017, a presidential decree in Kazakhstan ordered a transition from the Cyrillic to Latin script to be implemented by 2025. In January 2021, the target year for finishing the transition was pushed back to 2031.",
+          "[2] Chunk ID: KZ-14\nIn October 2017, the then president, Nursultan Nazarbayev, decreed that the writing system would change from Cyrillic to Latin script by 2025. The proposed Latin alphabet has been revised several times and, as of January 2021, is close to the inventory of the Turkish alphabet, though it lacks the letters C and Ç and has four additional letters: Ä, Ñ, Q, and Ū (though other letters, such as Y, have different values in the two languages). It is scheduled to be phased in from 2023 to 2031. Over one million Kazakh speakers in Xinjiang use a modified version of the Perso-Arabic script for writing.",
+          "[3] Chunk ID: GO-22\nThe documents an applicant uploads are used only to decide the grant. They are kept for three years after the last payment and then deleted. The Grant Office does not share income information with lecturers, with other students, or with any organisation outside the university, except where the law requires it."
+        ],
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer the question using only the provided context.\nIf the answer cannot be found in the context, say that you do not know.\nCite the context blocks you used, like [1] or [2][3]."
+          },
+          {
+            "role": "user",
+            "content": "Context:\n[1] Chunk ID: KZ-43\nThe Kazakh language has been written mainly in four scripts at various points of time—Old Turkic, Cyrillic, Latin, and Arabic—each having a distinct alphabet. The Arabic script is used in Iran, Afghanistan, and China, while the Cyrillic script is used in Kazakhstan, Kyrgyzstan, Russia, and Mongolia. In October 2017, a presidential decree in Kazakhstan ordered a transition from the Cyrillic to Latin script to be implemented by 2025. In January 2021, the target year for finishing the transition was pushed back to 2031.\n\n[2] Chunk ID: KZ-14\nIn October 2017, the then president, Nursultan Nazarbayev, decreed that the writing system would change from Cyrillic to Latin script by 2025. The proposed Latin alphabet has been revised several times and, as of January 2021, is close to the inventory of the Turkish alphabet, though it lacks the letters C and Ç and has four additional letters: Ä, Ñ, Q, and Ū (though other letters, such as Y, have different values in the two languages). It is scheduled to be phased in from 2023 to 2031. Over one million Kazakh speakers in Xinjiang use a modified version of the Perso-Arabic script for writing.\n\n[3] Chunk ID: GO-22\nThe documents an applicant uploads are used only to decide the grant. They are kept for three years after the last payment and then deleted. The Grant Office does not share income information with lecturers, with other students, or with any organisation outside the university, except where the law requires it.\n\nQuestion:\nWhen did Kazakhstan decide to switch the Kazakh alphabet from Cyrillic to Latin, and when is the switch now due to finish?"
+          }
+        ],
+        "prompt_tokens": 434
+      },
+      "embedding_rag": {
+        "answer": "Kazakhstan decided to switch from Cyrillic to Latin in **October 2017**. The transition is now due to finish by **2031**. [1][2]",
+        "retrieved": [
+          {
+            "rank": 1,
+            "id": "KZ-14",
+            "first_line": "In October 2017, the then president, Nursultan Nazarbayev, decreed that the writing system would change from Cyrillic to Latin script by 2025. The proposed Latin alphabet has been revised several times and, as of January 2021, is close to the inventory of the Turkish alphabet, though it lacks the letters C and Ç and has four additional letters: Ä, Ñ, Q, and Ū (though other letters, such as Y, have different values in the two languages). It is scheduled to be phased in from 2023 to 2031. Over one million Kazakh speakers in Xinjiang use a modified version of the Perso-Arabic script for writing.",
+            "score": 0.7204283475875854
+          },
+          {
+            "rank": 2,
+            "id": "KZ-43",
+            "first_line": "The Kazakh language has been written mainly in four scripts at various points of time—Old Turkic, Cyrillic, Latin, and Arabic—each having a distinct alphabet. The Arabic script is used in Iran, Afghanistan, and China, while the Cyrillic script is used in Kazakhstan, Kyrgyzstan, Russia, and Mongolia. In October 2017, a presidential decree in Kazakhstan ordered a transition from the Cyrillic to Latin script to be implemented by 2025. In January 2021, the target year for finishing the transition was pushed back to 2031.",
+            "score": 0.6927076578140259
+          },
+          {
+            "rank": 3,
+            "id": "KZ-05",
+            "first_line": "Astana is the capital city of Kazakhstan. With a population of 1,7 million within the city limits, it is the second-largest in the country after Almaty, the national capital until 1997. The city lies on the banks of the Ishim river in the north of Kazakhstan and is located within the Akmola Region but is self-administering. Initially founded as Aqmoly in 1830, the city was later renamed Akmolinsk, Tselinograd, and Aqmola before adopting the name Astana in 1998, or \"capital\" in Kazakh. In 2019, the city adopted the name Nur-Sultan in honor of former president Nursultan Nazarbayev, but it reverted to the name Astana in 2022. Astana's history includes growth, rapidly growing after becoming the capital. The decision to turn Astana into a modern and planned city was guided by Kisho Kurokawa. It has become an important center for culture, education, and commerce in Kazakhstan and Central Asia.",
+            "score": 0.43423402309417725
+          }
+        ],
+        "context_blocks": [
+          "[1] Chunk ID: KZ-14\nIn October 2017, the then president, Nursultan Nazarbayev, decreed that the writing system would change from Cyrillic to Latin script by 2025. The proposed Latin alphabet has been revised several times and, as of January 2021, is close to the inventory of the Turkish alphabet, though it lacks the letters C and Ç and has four additional letters: Ä, Ñ, Q, and Ū (though other letters, such as Y, have different values in the two languages). It is scheduled to be phased in from 2023 to 2031. Over one million Kazakh speakers in Xinjiang use a modified version of the Perso-Arabic script for writing.",
+          "[2] Chunk ID: KZ-43\nThe Kazakh language has been written mainly in four scripts at various points of time—Old Turkic, Cyrillic, Latin, and Arabic—each having a distinct alphabet. The Arabic script is used in Iran, Afghanistan, and China, while the Cyrillic script is used in Kazakhstan, Kyrgyzstan, Russia, and Mongolia. In October 2017, a presidential decree in Kazakhstan ordered a transition from the Cyrillic to Latin script to be implemented by 2025. In January 2021, the target year for finishing the transition was pushed back to 2031.",
+          "[3] Chunk ID: KZ-05\nAstana is the capital city of Kazakhstan. With a population of 1,7 million within the city limits, it is the second-largest in the country after Almaty, the national capital until 1997. The city lies on the banks of the Ishim river in the north of Kazakhstan and is located within the Akmola Region but is self-administering. Initially founded as Aqmoly in 1830, the city was later renamed Akmolinsk, Tselinograd, and Aqmola before adopting the name Astana in 1998, or \"capital\" in Kazakh. In 2019, the city adopted the name Nur-Sultan in honor of former president Nursultan Nazarbayev, but it reverted to the name Astana in 2022. Astana's history includes growth, rapidly growing after becoming the capital. The decision to turn Astana into a modern and planned city was guided by Kisho Kurokawa. It has become an important center for culture, education, and commerce in Kazakhstan and Central Asia."
+        ],
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer the question using only the provided context.\nIf the answer cannot be found in the context, say that you do not know.\nCite the context blocks you used, like [1] or [2][3]."
+          },
+          {
+            "role": "user",
+            "content": "Context:\n[1] Chunk ID: KZ-14\nIn October 2017, the then president, Nursultan Nazarbayev, decreed that the writing system would change from Cyrillic to Latin script by 2025. The proposed Latin alphabet has been revised several times and, as of January 2021, is close to the inventory of the Turkish alphabet, though it lacks the letters C and Ç and has four additional letters: Ä, Ñ, Q, and Ū (though other letters, such as Y, have different values in the two languages). It is scheduled to be phased in from 2023 to 2031. Over one million Kazakh speakers in Xinjiang use a modified version of the Perso-Arabic script for writing.\n\n[2] Chunk ID: KZ-43\nThe Kazakh language has been written mainly in four scripts at various points of time—Old Turkic, Cyrillic, Latin, and Arabic—each having a distinct alphabet. The Arabic script is used in Iran, Afghanistan, and China, while the Cyrillic script is used in Kazakhstan, Kyrgyzstan, Russia, and Mongolia. In October 2017, a presidential decree in Kazakhstan ordered a transition from the Cyrillic to Latin script to be implemented by 2025. In January 2021, the target year for finishing the transition was pushed back to 2031.\n\n[3] Chunk ID: KZ-05\nAstana is the capital city of Kazakhstan. With a population of 1,7 million within the city limits, it is the second-largest in the country after Almaty, the national capital until 1997. The city lies on the banks of the Ishim river in the north of Kazakhstan and is located within the Akmola Region but is self-administering. Initially founded as Aqmoly in 1830, the city was later renamed Akmolinsk, Tselinograd, and Aqmola before adopting the name Astana in 1998, or \"capital\" in Kazakh. In 2019, the city adopted the name Nur-Sultan in honor of former president Nursultan Nazarbayev, but it reverted to the name Astana in 2022. Astana's history includes growth, rapidly growing after becoming the capital. The decision to turn Astana into a modern and planned city was guided by Kisho Kurokawa. It has become an important center for culture, education, and commerce in Kazakhstan and Central Asia.\n\nQuestion:\nWhen did Kazakhstan decide to switch the Kazakh alphabet from Cyrillic to Latin, and when is the switch now due to finish?"
+          }
+        ],
+        "prompt_tokens": 595
+      }
+    }
+  },
+  "C-05": {
+    "question": "When was Narxoz University founded, and what was it called at the start?",
+    "reference": "In 1963, as the Almaty Institute of National Economy; it took its current name in 2016.",
+    "systems": {
+      "llm_only": {
+        "answer": "Narxoz University was founded in **1963**, originally under the name **Alma-Ata Institute of National Economy** (also rendered as the **Almaty Institute of National Economy**).",
+        "retrieved": [],
+        "context_blocks": [],
+        "messages": [
+          {
+            "role": "user",
+            "content": "When was Narxoz University founded, and what was it called at the start?"
+          }
+        ],
+        "prompt_tokens": 23
+      },
+      "bm25_rag": {
+        "answer": "Narxoz University was founded in 1963 as the **Almaty Institute of National Economy**. [1]",
+        "retrieved": [
+          {
+            "rank": 1,
+            "id": "KZ-44",
+            "first_line": "Narxoz University ( nar-HOHZ; Kazakh: Нархоз университеті / Narhoz universitetı [nɑrˈχoz ʊnʲɪvʲɪrsʲɪˌtʲeˈtɘ]) is a university in Almaty, Kazakhstan. It offers courses in economics, business, finance, and law. The university was founded in 1963 as Almaty Institute of National Economy and received its current name in 2016. It consists of three schools, five representative offices in the regions of Kazakhstan, and an economic college. The university's courses have been accredited by the Central and East European Management Development Association and Association of Chartered Certified Accountants.",
+            "score": 10.627253366802934
+          },
+          {
+            "rank": 2,
+            "id": "KZ-07",
+            "first_line": "It has been a UNESCO Creative City of Music since 2017, and classified as a Gamma+ level global city by the Globalization and World Cities Research Network. Landmarks and attractions in Almaty include the Central State Museum of Kazakhstan; Ascension Cathedral; Green Bazaar; Arbat, a pedestrian area; and Kök Töbe, a hilltop recreation area with views of the city and the surrounding mountains. The city is also home to educational institutions such as Al-Farabi Kazakh National University, the Kazakh-British Technical University, the International Information Technology University, and Narxoz University.",
+            "score": 7.274022388431266
+          },
+          {
+            "rank": 3,
+            "id": "KZ-11",
+            "first_line": "In 1955, the Soviet Ministry of Defense issued a decree and founded the Baikonur Cosmodrome. It was originally built as the chief base of operations for the Soviet space program. The Cosmodrome served as the launching point for Sputnik 1 and Vostok 1. The launchpad used for both missions was renamed \"Gagarin's Start\" in honour of Soviet cosmonaut Yuri Gagarin, who piloted Vostok 1 and became the first human in outer space. As of 2015 under Russian management, Baikonur is a spaceport, with numerous commercial, military, and scientific missions being launched annually.",
+            "score": 7.006079646243865
+          }
+        ],
+        "context_blocks": [
+          "[1] Chunk ID: KZ-44\nNarxoz University ( nar-HOHZ; Kazakh: Нархоз университеті / Narhoz universitetı [nɑrˈχoz ʊnʲɪvʲɪrsʲɪˌtʲeˈtɘ]) is a university in Almaty, Kazakhstan. It offers courses in economics, business, finance, and law. The university was founded in 1963 as Almaty Institute of National Economy and received its current name in 2016. It consists of three schools, five representative offices in the regions of Kazakhstan, and an economic college. The university's courses have been accredited by the Central and East European Management Development Association and Association of Chartered Certified Accountants.",
+          "[2] Chunk ID: KZ-07\nIt has been a UNESCO Creative City of Music since 2017, and classified as a Gamma+ level global city by the Globalization and World Cities Research Network. Landmarks and attractions in Almaty include the Central State Museum of Kazakhstan; Ascension Cathedral; Green Bazaar; Arbat, a pedestrian area; and Kök Töbe, a hilltop recreation area with views of the city and the surrounding mountains. The city is also home to educational institutions such as Al-Farabi Kazakh National University, the Kazakh-British Technical University, the International Information Technology University, and Narxoz University.",
+          "[3] Chunk ID: KZ-11\nIn 1955, the Soviet Ministry of Defense issued a decree and founded the Baikonur Cosmodrome. It was originally built as the chief base of operations for the Soviet space program. The Cosmodrome served as the launching point for Sputnik 1 and Vostok 1. The launchpad used for both missions was renamed \"Gagarin's Start\" in honour of Soviet cosmonaut Yuri Gagarin, who piloted Vostok 1 and became the first human in outer space. As of 2015 under Russian management, Baikonur is a spaceport, with numerous commercial, military, and scientific missions being launched annually."
+        ],
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer the question using only the provided context.\nIf the answer cannot be found in the context, say that you do not know.\nCite the context blocks you used, like [1] or [2][3]."
+          },
+          {
+            "role": "user",
+            "content": "Context:\n[1] Chunk ID: KZ-44\nNarxoz University ( nar-HOHZ; Kazakh: Нархоз университеті / Narhoz universitetı [nɑrˈχoz ʊnʲɪvʲɪrsʲɪˌtʲeˈtɘ]) is a university in Almaty, Kazakhstan. It offers courses in economics, business, finance, and law. The university was founded in 1963 as Almaty Institute of National Economy and received its current name in 2016. It consists of three schools, five representative offices in the regions of Kazakhstan, and an economic college. The university's courses have been accredited by the Central and East European Management Development Association and Association of Chartered Certified Accountants.\n\n[2] Chunk ID: KZ-07\nIt has been a UNESCO Creative City of Music since 2017, and classified as a Gamma+ level global city by the Globalization and World Cities Research Network. Landmarks and attractions in Almaty include the Central State Museum of Kazakhstan; Ascension Cathedral; Green Bazaar; Arbat, a pedestrian area; and Kök Töbe, a hilltop recreation area with views of the city and the surrounding mountains. The city is also home to educational institutions such as Al-Farabi Kazakh National University, the Kazakh-British Technical University, the International Information Technology University, and Narxoz University.\n\n[3] Chunk ID: KZ-11\nIn 1955, the Soviet Ministry of Defense issued a decree and founded the Baikonur Cosmodrome. It was originally built as the chief base of operations for the Soviet space program. The Cosmodrome served as the launching point for Sputnik 1 and Vostok 1. The launchpad used for both missions was renamed \"Gagarin's Start\" in honour of Soviet cosmonaut Yuri Gagarin, who piloted Vostok 1 and became the first human in outer space. As of 2015 under Russian management, Baikonur is a spaceport, with numerous commercial, military, and scientific missions being launched annually.\n\nQuestion:\nWhen was Narxoz University founded, and what was it called at the start?"
+          }
+        ],
+        "prompt_tokens": 520
+      },
+      "embedding_rag": {
+        "answer": "Narxoz University was founded in **1963** as the **Almaty Institute of National Economy**. [1]",
+        "retrieved": [
+          {
+            "rank": 1,
+            "id": "KZ-44",
+            "first_line": "Narxoz University ( nar-HOHZ; Kazakh: Нархоз университеті / Narhoz universitetı [nɑrˈχoz ʊnʲɪvʲɪrsʲɪˌtʲeˈtɘ]) is a university in Almaty, Kazakhstan. It offers courses in economics, business, finance, and law. The university was founded in 1963 as Almaty Institute of National Economy and received its current name in 2016. It consists of three schools, five representative offices in the regions of Kazakhstan, and an economic college. The university's courses have been accredited by the Central and East European Management Development Association and Association of Chartered Certified Accountants.",
+            "score": 0.6602649092674255
+          },
+          {
+            "rank": 2,
+            "id": "KZ-05",
+            "first_line": "Astana is the capital city of Kazakhstan. With a population of 1,7 million within the city limits, it is the second-largest in the country after Almaty, the national capital until 1997. The city lies on the banks of the Ishim river in the north of Kazakhstan and is located within the Akmola Region but is self-administering. Initially founded as Aqmoly in 1830, the city was later renamed Akmolinsk, Tselinograd, and Aqmola before adopting the name Astana in 1998, or \"capital\" in Kazakh. In 2019, the city adopted the name Nur-Sultan in honor of former president Nursultan Nazarbayev, but it reverted to the name Astana in 2022. Astana's history includes growth, rapidly growing after becoming the capital. The decision to turn Astana into a modern and planned city was guided by Kisho Kurokawa. It has become an important center for culture, education, and commerce in Kazakhstan and Central Asia.",
+            "score": 0.27147766947746277
+          },
+          {
+            "rank": 3,
+            "id": "KZ-14",
+            "first_line": "In October 2017, the then president, Nursultan Nazarbayev, decreed that the writing system would change from Cyrillic to Latin script by 2025. The proposed Latin alphabet has been revised several times and, as of January 2021, is close to the inventory of the Turkish alphabet, though it lacks the letters C and Ç and has four additional letters: Ä, Ñ, Q, and Ū (though other letters, such as Y, have different values in the two languages). It is scheduled to be phased in from 2023 to 2031. Over one million Kazakh speakers in Xinjiang use a modified version of the Perso-Arabic script for writing.",
+            "score": 0.250808447599411
+          }
+        ],
+        "context_blocks": [
+          "[1] Chunk ID: KZ-44\nNarxoz University ( nar-HOHZ; Kazakh: Нархоз университеті / Narhoz universitetı [nɑrˈχoz ʊnʲɪvʲɪrsʲɪˌtʲeˈtɘ]) is a university in Almaty, Kazakhstan. It offers courses in economics, business, finance, and law. The university was founded in 1963 as Almaty Institute of National Economy and received its current name in 2016. It consists of three schools, five representative offices in the regions of Kazakhstan, and an economic college. The university's courses have been accredited by the Central and East European Management Development Association and Association of Chartered Certified Accountants.",
+          "[2] Chunk ID: KZ-05\nAstana is the capital city of Kazakhstan. With a population of 1,7 million within the city limits, it is the second-largest in the country after Almaty, the national capital until 1997. The city lies on the banks of the Ishim river in the north of Kazakhstan and is located within the Akmola Region but is self-administering. Initially founded as Aqmoly in 1830, the city was later renamed Akmolinsk, Tselinograd, and Aqmola before adopting the name Astana in 1998, or \"capital\" in Kazakh. In 2019, the city adopted the name Nur-Sultan in honor of former president Nursultan Nazarbayev, but it reverted to the name Astana in 2022. Astana's history includes growth, rapidly growing after becoming the capital. The decision to turn Astana into a modern and planned city was guided by Kisho Kurokawa. It has become an important center for culture, education, and commerce in Kazakhstan and Central Asia.",
+          "[3] Chunk ID: KZ-14\nIn October 2017, the then president, Nursultan Nazarbayev, decreed that the writing system would change from Cyrillic to Latin script by 2025. The proposed Latin alphabet has been revised several times and, as of January 2021, is close to the inventory of the Turkish alphabet, though it lacks the letters C and Ç and has four additional letters: Ä, Ñ, Q, and Ū (though other letters, such as Y, have different values in the two languages). It is scheduled to be phased in from 2023 to 2031. Over one million Kazakh speakers in Xinjiang use a modified version of the Perso-Arabic script for writing."
+        ],
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer the question using only the provided context.\nIf the answer cannot be found in the context, say that you do not know.\nCite the context blocks you used, like [1] or [2][3]."
+          },
+          {
+            "role": "user",
+            "content": "Context:\n[1] Chunk ID: KZ-44\nNarxoz University ( nar-HOHZ; Kazakh: Нархоз университеті / Narhoz universitetı [nɑrˈχoz ʊnʲɪvʲɪrsʲɪˌtʲeˈtɘ]) is a university in Almaty, Kazakhstan. It offers courses in economics, business, finance, and law. The university was founded in 1963 as Almaty Institute of National Economy and received its current name in 2016. It consists of three schools, five representative offices in the regions of Kazakhstan, and an economic college. The university's courses have been accredited by the Central and East European Management Development Association and Association of Chartered Certified Accountants.\n\n[2] Chunk ID: KZ-05\nAstana is the capital city of Kazakhstan. With a population of 1,7 million within the city limits, it is the second-largest in the country after Almaty, the national capital until 1997. The city lies on the banks of the Ishim river in the north of Kazakhstan and is located within the Akmola Region but is self-administering. Initially founded as Aqmoly in 1830, the city was later renamed Akmolinsk, Tselinograd, and Aqmola before adopting the name Astana in 1998, or \"capital\" in Kazakh. In 2019, the city adopted the name Nur-Sultan in honor of former president Nursultan Nazarbayev, but it reverted to the name Astana in 2022. Astana's history includes growth, rapidly growing after becoming the capital. The decision to turn Astana into a modern and planned city was guided by Kisho Kurokawa. It has become an important center for culture, education, and commerce in Kazakhstan and Central Asia.\n\n[3] Chunk ID: KZ-14\nIn October 2017, the then president, Nursultan Nazarbayev, decreed that the writing system would change from Cyrillic to Latin script by 2025. The proposed Latin alphabet has been revised several times and, as of January 2021, is close to the inventory of the Turkish alphabet, though it lacks the letters C and Ç and has four additional letters: Ä, Ñ, Q, and Ū (though other letters, such as Y, have different values in the two languages). It is scheduled to be phased in from 2023 to 2031. Over one million Kazakh speakers in Xinjiang use a modified version of the Perso-Arabic script for writing.\n\nQuestion:\nWhen was Narxoz University founded, and what was it called at the start?"
+          }
+        ],
+        "prompt_tokens": 623
+      }
+    }
+  },
+  "C-06": {
+    "question": "I am a master's student. How much need-based grant can I get?",
+    "reference": "The corpus does not say. GO-20 says master's students have a separate scheme that the handbook does not describe.",
+    "systems": {
+      "llm_only": {
+        "answer": "It depends mainly on your **country, school, degree program, income, enrollment status, and citizenship/residency**.\n\nIf you mean the **United States**:\n\n- **Federal Pell Grant:** Generally **not available to graduate students**; it is primarily for undergraduates who have not earned a bachelor’s degree.\n- **Federal Supplemental Educational Opportunity Grant (FSEOG):** Also generally limited to undergraduates.\n- **TEACH Grant:** Graduate students in eligible teacher-preparation programs may receive up to the federal annual limit—currently **up to $4,000 per year**, subject to eligibility and service requirements.\n- **School, state, and private grants:** These may provide need-based aid, but amounts vary widely. Your school’s financial-aid office determines much of this using your **FAFSA** information and institutional policies.\n- **Federal loans and work-study:** Graduate students may qualify for loans and sometimes work-study, even when they do not qualify for grants.\n\nTo estimate your amount, tell me:\n\n1. Your **country/state**\n2. Whether this is a **master’s degree**\n3. Your **annual income and assets** (rough ranges are fine)\n4. Whether you are **full-time**\n5. Your **citizenship or residency status**\n6. The school or program, if known\n\nIf you are in the U.S., completing the FAFSA and checking your school’s graduate funding page is the fastest way to get an actual estimate.",
+        "retrieved": [],
+        "context_blocks": [],
+        "messages": [
+          {
+            "role": "user",
+            "content": "I am a master's student. How much need-based grant can I get?"
+          }
+        ],
+        "prompt_tokens": 21
+      },
+      "bm25_rag": {
+        "answer": "I do not know how much you can get. The provided context says that master's students are supported by a separate scheme, which this handbook does not describe; you should ask your department for its rules. [1]",
+        "retrieved": [
+          {
+            "rank": 1,
+            "id": "GO-20",
+            "first_line": "The need-based grant is for full-time undergraduate students only. Part-time students, distance-learning students and incoming exchange students cannot apply. Master's and doctoral students are supported by a separate scheme, which this handbook does not describe; they should ask their own department for its rules.",
+            "score": 13.687380449620022
+          },
+          {
+            "rank": 2,
+            "id": "GO-16",
+            "first_line": "The need-based grant can be held together with a merit scholarship, but not together with a second need-based grant from any other source. The total of all university support a student receives in one academic year is capped at 400,000 tenge. When the cap would be exceeded, the need-based grant is reduced so that the total equals the cap.",
+            "score": 11.407054868335198
+          },
+          {
+            "rank": 3,
+            "id": "GO-01",
+            "first_line": "The need-based study grant 2026 is run by the Grant Office for full-time undergraduate students. It exists so that a student from a low-income household can pay for study costs without taking on paid work that harms their studies. One grant is awarded per student per academic year. The grant is a gift, not a loan: it does not have to be paid back unless the student withdraws early, as explained in the section on academic progress.",
+            "score": 9.036897170269267
+          }
+        ],
+        "context_blocks": [
+          "[1] Chunk ID: GO-20\nThe need-based grant is for full-time undergraduate students only. Part-time students, distance-learning students and incoming exchange students cannot apply. Master's and doctoral students are supported by a separate scheme, which this handbook does not describe; they should ask their own department for its rules.",
+          "[2] Chunk ID: GO-16\nThe need-based grant can be held together with a merit scholarship, but not together with a second need-based grant from any other source. The total of all university support a student receives in one academic year is capped at 400,000 tenge. When the cap would be exceeded, the need-based grant is reduced so that the total equals the cap.",
+          "[3] Chunk ID: GO-01\nThe need-based study grant 2026 is run by the Grant Office for full-time undergraduate students. It exists so that a student from a low-income household can pay for study costs without taking on paid work that harms their studies. One grant is awarded per student per academic year. The grant is a gift, not a loan: it does not have to be paid back unless the student withdraws early, as explained in the section on academic progress."
+        ],
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer the question using only the provided context.\nIf the answer cannot be found in the context, say that you do not know.\nCite the context blocks you used, like [1] or [2][3]."
+          },
+          {
+            "role": "user",
+            "content": "Context:\n[1] Chunk ID: GO-20\nThe need-based grant is for full-time undergraduate students only. Part-time students, distance-learning students and incoming exchange students cannot apply. Master's and doctoral students are supported by a separate scheme, which this handbook does not describe; they should ask their own department for its rules.\n\n[2] Chunk ID: GO-16\nThe need-based grant can be held together with a merit scholarship, but not together with a second need-based grant from any other source. The total of all university support a student receives in one academic year is capped at 400,000 tenge. When the cap would be exceeded, the need-based grant is reduced so that the total equals the cap.\n\n[3] Chunk ID: GO-01\nThe need-based study grant 2026 is run by the Grant Office for full-time undergraduate students. It exists so that a student from a low-income household can pay for study costs without taking on paid work that harms their studies. One grant is awarded per student per academic year. The grant is a gift, not a loan: it does not have to be paid back unless the student withdraws early, as explained in the section on academic progress.\n\nQuestion:\nI am a master's student. How much need-based grant can I get?"
+          }
+        ],
+        "prompt_tokens": 318
+      },
+      "embedding_rag": {
+        "answer": "I don’t know the amount. The need-based grant described here is only for full-time undergraduate students; master’s students are covered by a separate scheme and should ask their department for its rules. [1]",
+        "retrieved": [
+          {
+            "rank": 1,
+            "id": "GO-20",
+            "first_line": "The need-based grant is for full-time undergraduate students only. Part-time students, distance-learning students and incoming exchange students cannot apply. Master's and doctoral students are supported by a separate scheme, which this handbook does not describe; they should ask their own department for its rules.",
+            "score": 0.6664198637008667
+          },
+          {
+            "rank": 2,
+            "id": "GO-16",
+            "first_line": "The need-based grant can be held together with a merit scholarship, but not together with a second need-based grant from any other source. The total of all university support a student receives in one academic year is capped at 400,000 tenge. When the cap would be exceeded, the need-based grant is reduced so that the total equals the cap.",
+            "score": 0.6161175966262817
+          },
+          {
+            "rank": 3,
+            "id": "GO-01",
+            "first_line": "The need-based study grant 2026 is run by the Grant Office for full-time undergraduate students. It exists so that a student from a low-income household can pay for study costs without taking on paid work that harms their studies. One grant is awarded per student per academic year. The grant is a gift, not a loan: it does not have to be paid back unless the student withdraws early, as explained in the section on academic progress.",
+            "score": 0.5538948774337769
+          }
+        ],
+        "context_blocks": [
+          "[1] Chunk ID: GO-20\nThe need-based grant is for full-time undergraduate students only. Part-time students, distance-learning students and incoming exchange students cannot apply. Master's and doctoral students are supported by a separate scheme, which this handbook does not describe; they should ask their own department for its rules.",
+          "[2] Chunk ID: GO-16\nThe need-based grant can be held together with a merit scholarship, but not together with a second need-based grant from any other source. The total of all university support a student receives in one academic year is capped at 400,000 tenge. When the cap would be exceeded, the need-based grant is reduced so that the total equals the cap.",
+          "[3] Chunk ID: GO-01\nThe need-based study grant 2026 is run by the Grant Office for full-time undergraduate students. It exists so that a student from a low-income household can pay for study costs without taking on paid work that harms their studies. One grant is awarded per student per academic year. The grant is a gift, not a loan: it does not have to be paid back unless the student withdraws early, as explained in the section on academic progress."
+        ],
+        "messages": [
+          {
+            "role": "system",
+            "content": "Answer the question using only the provided context.\nIf the answer cannot be found in the context, say that you do not know.\nCite the context blocks you used, like [1] or [2][3]."
+          },
+          {
+            "role": "user",
+            "content": "Context:\n[1] Chunk ID: GO-20\nThe need-based grant is for full-time undergraduate students only. Part-time students, distance-learning students and incoming exchange students cannot apply. Master's and doctoral students are supported by a separate scheme, which this handbook does not describe; they should ask their own department for its rules.\n\n[2] Chunk ID: GO-16\nThe need-based grant can be held together with a merit scholarship, but not together with a second need-based grant from any other source. The total of all university support a student receives in one academic year is capped at 400,000 tenge. When the cap would be exceeded, the need-based grant is reduced so that the total equals the cap.\n\n[3] Chunk ID: GO-01\nThe need-based study grant 2026 is run by the Grant Office for full-time undergraduate students. It exists so that a student from a low-income household can pay for study costs without taking on paid work that harms their studies. One grant is awarded per student per academic year. The grant is a gift, not a loan: it does not have to be paid back unless the student withdraws early, as explained in the section on academic progress.\n\nQuestion:\nI am a master's student. How much need-based grant can I get?"
+          }
+        ],
+        "prompt_tokens": 318
+      }
+    }
+  }
+}
